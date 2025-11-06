@@ -1,6 +1,5 @@
-from collections import defaultdict
 import sys
-
+from collections import defaultdict
 from pathlib import Path
 from colorama import Fore, init as colorama_init
 
