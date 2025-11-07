@@ -46,11 +46,8 @@ def show_phone(args, contacts):
 @input_error
 def show_all(contacts):
     if not contacts:
-        print("Your contact list is empty.")
-        return 1
-    for name, phone in contacts.items():
-        print(name + ": ", phone)
-    return 0
+        return {"Message": "Your contact list is empty."}
+    return contacts
 
 
 def main():
@@ -75,9 +72,8 @@ def main():
             print(show_phone(args, contacts))
         elif command == "all":
             res = show_all(contacts)
-            if type(res) == str:
-                print(res)
-
+            for name, phone in res.items():
+                print(name + ":", phone)
         else:
             print("Invalid command.")
 

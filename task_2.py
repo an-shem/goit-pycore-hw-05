@@ -9,10 +9,7 @@ def generator_numbers(text: str):
 
 
 def sum_profit(text: str, func: Callable):
-    res = 0.0
-    for sum in func(text):
-        res += sum
-    return res
+    return sum(func(text))
 
 
 def main():
